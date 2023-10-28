@@ -35,8 +35,6 @@ export const UserContextProvider = ({ children }: Props) => {
     });
     const [users, setUsers] = useState<UserDatasType[]>([]);
 
-    console.log(user);
-
     const handleSubmit = () => {
         setUsers([...users, user]);
 
@@ -49,8 +47,6 @@ export const UserContextProvider = ({ children }: Props) => {
           job: "",
         });
     };
-
-    console.log(users);
 
     return (
         <UserContext.Provider value={{ user, setUser, handleSubmit, users }}>

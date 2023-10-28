@@ -27,8 +27,8 @@ const Form = () => {
     <Flex as="div" w={"80%"}>
       <Box
         as="div"
-              w={"100%"}
-              p={"8"}
+        w={"100%"}
+        p={"8"}
         bg={"whiteAlpha.600"}
         style={{ border: "1px solid transparent", borderRadius: "15px" }}
       >
@@ -80,9 +80,11 @@ const Form = () => {
             value={user.job}
             onChange={handleChange}
           />
-              </FormControl>
-              
-              <Button marginTop={"1rem"} onClick={handleSubmit}>Cadastrar</Button>
+        </FormControl>
+
+        <Button marginTop={"1rem"} onClick={handleSubmit}>
+          Cadastrar
+        </Button>
       </Box>
     </Flex>
   );
