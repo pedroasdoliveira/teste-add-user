@@ -1,14 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-  Box,
-  Button,
-  Flex,
-  FormControl,
-  FormLabel,
-  Input,
-} from "@chakra-ui/react";
-import React from "react";
-import { UserDatasType, useUser } from "../context/UserContext";
+import { Box, Button, Flex, FormControl, FormHelperText, FormLabel, Input } from '@chakra-ui/react';
+import React from 'react';
+
+import { UserDatasType, useUser } from '../context/UserContext';
 
 const Form = () => {
   const { user, setUser, handleSubmit } = useUser();
@@ -64,6 +58,7 @@ const Form = () => {
             value={user.cpf}
             onChange={handleChange}
           />
+          <FormHelperText>Exemplo de formato: xxx.xxx.xxx-xx</FormHelperText>
 
           <FormLabel>Telefone</FormLabel>
           <Input
@@ -72,6 +67,7 @@ const Form = () => {
             value={user.tel}
             onChange={handleChange}
           />
+          <FormHelperText>Exemplo de formato: (ddd) xxxxx-xxxx</FormHelperText>
 
           <FormLabel>Cargo</FormLabel>
           <Input
