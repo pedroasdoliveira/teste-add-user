@@ -1,9 +1,12 @@
-import { Center, Container, Flex, Heading } from '@chakra-ui/react'
+import { Button, Center, Container, Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
 import Form from '../components/Form';
 import TableInfos from '../components/TableInfos';
+import { useNavigate } from 'react-router';
 
 const User = () => {
+  const navigate = useNavigate();
+
   return (
     <Container
       as="main"
@@ -40,6 +43,10 @@ const User = () => {
 
         <Center w={"100%"}>
           <TableInfos />
+        </Center>
+
+        <Center w={"100%"}>
+          <Button onClick={() => navigate('/')}>Voltar</Button>
         </Center>
       </Flex>
     </Container>
